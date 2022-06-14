@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homepage</title>
+    <meta name="description" contents="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+<style>
+    body{
+        font-family: verdana;
+    }
+    .imgcontainer{
+        text-align:center;
+        margin-left: 3% 0%;
+    }
+    header h2{
+        
+        position: absolute;
+        margin-left: 5%;
+    }
+    footer{
+        position: right;
+        height: 15vh;
+        bottom : 0;
+    }
+    footer h2{
+        position: center;    
+    }
+    
+    button{
+        background-color: rgb(96, 162, 219);
+        width: 25%;
+        padding: 15px;
+        color:rgb(0, 111, 76);
+        border: 1px solid #04159b;
+        float: center;
+        font-size: 18px;
+        font-weight: 600px;
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h2>
+            {% load static %}
+            <div class="imgcontainer">
+                <img src="{% static 'a.png' %}"  width= "120" height= "60">
+            </div>
+        </h2>
+    </header><br><br><br><br><br><br><br><br>
+
+    <center>
+
+    <font color = "red" size ="20">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags}} alert-dismissible fade show" role="alert">
+    <strong>Message:</strong>{{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    {% endfor %}
+
+    <h3>Welcome to Homepage</h3>
+</font>
+<font color = "red">
+
+    {% if user.is_authenticated %}
+    <h4>Hello  {{fname}} </h4><br>
+    <h6>You're successfully logged in.</h6>
+    <button type="submit"><a href="/signout">Sign Out</a></button>
+    {% else %}
+    <button type="submit"><a href="/signup">Sign Up</a></button>
+    <button type="submit"><a href="/login">Log In</a></button>
+    {% endif %}
+
+    <script src="" async defer></script>
+</font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+    <h3>&copy; Copyright Reserved.</h3>
+</footer>
+</body></center>
+</html>

@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Chandigarh University Management System Signup</title>
+        <style>
+            body{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDqfMHcRR26vuMA7JGx0FsjFKaS_4pND4SCA&usqp=CAU");
+
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:white;
+            }
+            button{
+                background-color: rgb(231, 90, 20);
+                width: 55%;
+                height:7%;
+                padding: 15px;
+                color:white;
+                border: 1px solid #04159b;
+                float: center;
+                font-size: 18px;
+                font-weight: 600px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                
+                width: 38%;
+                height: 92%;
+            }
+            input[type=email], input[type=text],input[type=password]{
+                width:55%;
+                height: 8%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 6px 12px;
+                display: inline-block;
+                border: 2px solid greenyellow;
+                box-sizing: border-box;
+            }
+            button:hover{
+                opacity:0.7;
+            }
+            
+            .imgcontainer{
+                text-align:center;
+                margin: 24px 0 12px 0;
+            }
+            img.avatar {
+                width:28%;
+                border-radius: 50%;
+            }
+        </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" >
+    </head>
+    <body>
+        
+        <center>
+        <form action="#" method ="post">
+            {% csrf_token %}
+            {%load static %}
+            <center><div class = "container">
+                
+                <div class="imgcontainer">
+                    <img src="{% static 'a.png' %}"  >
+                </div>
+                <font color="white">
+                    <h2 id="h2_header">Sign up</h2>
+                    <p id="pHeader">
+                        Welcome to University Information<br />
+                        Management System
+                </p>
+                
+                <input type='text' placeholder ='Your First name' name='first_name' required><br>
+    
+                <input type='text' placeholder ='Your Last name' name='last_name' required><br>
+
+                <input type="email" placeholder ="Email Address" name="email" float="center" required><br>
+
+                <input type="password" placeholder ="Enter password" name="password" required><br>
+                
+                <input type="password" placeholder ="Enter password" name="password" required><br><br>
+                <button type="submit"><b>Sign Up</b></button><br>
+                <p>
+                    <span>Already have an account </span><a href="http://localhost:8000/login/"><b>Login </b></a>
+                </p>
+  
+                </font>  
+            </div></center>
+        </form>
+        </center>
+    </body>
+</html>

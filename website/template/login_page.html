@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Chandigarh University Management System Login</title>
+        <style>
+            body{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDqfMHcRR26vuMA7JGx0FsjFKaS_4pND4SCA&usqp=CAU");
+
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:white;
+            }
+            .button{
+                background-color: rgb(231, 51, 11);
+                width: 40%;
+                height:40px;
+                
+                margin: 5.5px 0px;
+                border-radius: 50px;
+                display: inline-block;
+                padding: 6px 12px;
+                color:rgb(255, 255, 255);
+                border: 1px solid #d10202;
+                
+                font-size: 12px;
+                font-weight: 600px;
+            }
+            
+            label{
+                font-size: 20px;
+            }
+            form{
+                width: 50%;
+                height: 79.2%;
+            }
+            input[type=email], input[type=password], input[type=text]{
+                width:40%;
+                height:40px;
+                font-size: 14px;
+                margin: 5.5px 0px;
+                padding: 6px 12px;
+                
+                border: 1px solid rgb(230, 235, 222);
+                box-sizing: border;
+                border-radius: 50px;
+            }
+            button:hover{
+                opacity:0.7;
+            }
+            .container{
+                padding: 65px;
+                
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            .imgcontainer{
+                text-align:center;
+                margin: 24px 0 12px 0;
+            }
+            img.avatar {
+                width:25%;
+                border-radius: 50%;
+            }
+            
+            .checkbox{
+                float: left;
+            }
+            p{
+                margin: 10px 0px;
+            }
+            
+
+        </style>
+        
+        </head>
+        <body>
+            
+        <center>
+            <form  action="#" method ="POST" >
+                
+                {% csrf_token %}
+                {% load static %}
+                <center><div class = "container">
+                    
+                    <div class="imgcontainer">
+                        <img src="{% static 'a.png' %}" >
+                    </div>
+                    <font color="white">
+                    <h2 id="h2_header">Log in</h2>
+                    <p id="pHeader">
+                        Welcome to University Information<br />
+                        Management System
+                    </p>
+                    
+                    <input type="email" name="email" float="center" placeholder="Enter User Id" /><br>
+                    
+                    <input name="txtLoginPassword" type="password" maxlength="15" id="txtLoginPassword" class="password-ico" placeholder="Enter Password" /><br>
+                    
+
+                    <button class="button" type="submit">Log In</button><br>                    
+                    
+                    
+                    
+                    <span><font color="white">Don't have an account? </font></span><a href="http://localhost:8000/signup/"> <font color="red">Signup </font> </a>
+                </div></center>
+            
+                
+            </font>
+        
+        </center>    
+        </body>
+</html>
