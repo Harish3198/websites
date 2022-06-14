@@ -20,7 +20,7 @@ from login.views import loginaction
 from signup.views import home
 
 urlpatterns = [
-    path('home/', home),
+    path('', home),
     path('admin/', admin.site.urls),
     path('signup/',signupaction),
     path('login/',loginaction),
